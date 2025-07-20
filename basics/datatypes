@@ -1,0 +1,90 @@
+DATATYPES:
+----------
+
+CREATE DATABASE studentdb;
+
+	1. BIT - BIT(n):
+	----------------
+		1. BIT is used to store the bits values, which is basically 0's & 1's. It can store upto 64bits.
+		2. Syntax: b'1101' or B'1101 (way1)
+				   0b101001 (way 2)
+		3. By default value of n is 1
+		4. if bit(n) where n is set to 7 bits, then if you try to add 8bits value with leading zero, it will pad 0's and insert 
+			value w/o error. 
+		5. use bin(column_name) to show binary value - Ex: select bin(studentID) from studentInfo;
+		6. lpad function is used to retain the leading 0's - Ex: select lpad(bin(column_name), bit_size, '0')) from studentInfo;
+		
+	2. BOOLEAN / BOOL / TINYINT:
+	----------------------------
+	MySQL does not have built-in Boolean type. However, it uses TINYINT(1) instead. To make it more convenient, 
+	MySQL provides BOOLEAN or BOOL as the synonym of TINYINT(1).
+
+	In MySQL, zero is considered as false, and non-zero value is considered as true. To use Boolean literals, 
+	you use the constants TRUE and FALSE that evaluate to 1 and 0 respectively. 
+	
+	If you use the following statement, which will the give result values where we have boolean value as 1.
+	i.e., select * from studentInfo where attendance = 1 or true;
+	but all non-zero values are also considered as zero, so if we have set any column with non-zero value, if 
+	you want to retrive them , then use the following:
+	
+	is true, is not true
+	is fals, is not false
+	
+	If you want to output the result as true and false, you can use the IF function as follows:
+	Example: select Name, if(attendance, 'true', 'false') from studentInfo;
+	
+	3. CHAR:
+	--------
+	When you query the CHAR value, MySQL removes the trailing spaces. However, while querying the trailing spaces are considered.
+	
+	Note that MySQL will not remove the trailing spaces if you enable the PAD_CHAR_TO_FULL_LENGTH SQL mode.
+	
+	LENGTH function is used to get the length of the character. Example: select location, length(location) from studentInfo;
+	
+	4. DATE:
+	--------
+	 MySQL uses yyyy-mm-dd format for storing a date value. This format is fixed and it is not possible to change it.
+	 
+	 To get the current date and time, you use NOW() function. Example: SELECT NOW();
+	 To get only date part of a DATETIME value, you use the DATE() function. Example: SELECT DATE(NOW());
+	 To format a date value, you use  DATE_FORMAT function. Example: SELECT DATE_FORMAT(CURDATE(), '%m/%d/%Y') today;
+	 To get the current system date, you use  CURDATE() function as follows: select CURDATE();
+	 To calculate the number of days between two date values, you use the DATEDIFF function: SELECT DATEDIFF('2015-11-04','2014-11-04') days;
+	 
+	 To add/sub date: DATE_ADD, DATE_SUB
+	SELECT '2015-01-01' start,
+    DATE_ADD('2015-01-01', INTERVAL 1 DAY) 'one day later',
+    DATE_ADD('2015-01-01', INTERVAL 1 WEEK) 'one week later',
+    DATE_ADD('2015-01-01', INTERVAL 1 MONTH) 'one month later',
+    DATE_ADD('2015-01-01', INTERVAL 1 YEAR) 'one year later';
+	
+	5. INT(signed/unsigned - zerofill)
+	----------------------------------
+		1. tiny - used for the applications where you know the number of records will be relatively small. 
+					Example - quantity of products, Ratings/Scores, Status codes etc. Storage Efficiency and Ranging Suitability.
+		2. smallint, mediumint, int, bigint
+	
+	6. VARCHAR:
+	-----------
+	7.DECIMAL:
+	----------
+	P - The range of P is 1 to 65.
+	D - represents the number of digits after the decimal point. The range of D is 0 to 30.
+		MySQL requires that D is less than or equal to (<=) P.
+	Besides the DECIMAL keyword, you can also use DEC, FIXED, or NUMERIC.
+
+	BIT
+INT
+BOOLEAN
+DECIMAL
+DATETIME
+TIMESTAMP
+DATE
+TIME
+CHAR
+VARCHAR
+TEXT
+BINARY
+VARBINARY
+ENUM
+BLOB	

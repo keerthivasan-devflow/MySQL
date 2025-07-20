@@ -1,0 +1,18 @@
+IF condition THEN 
+   statements;
+END IF;
+
+IF condition THEN 
+   statements;
+ELSE
+    statements
+END IF;
+
+IF condition THEN
+    statements
+ELSEIF condition THEN
+    statements
+...
+ELSE
+    statements
+ENDIF

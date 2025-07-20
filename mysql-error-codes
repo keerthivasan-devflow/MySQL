@@ -1,0 +1,55 @@
+MySQL error codes represent specific errors encountered during database operations. These error codes help users and administrators identify problems and troubleshoot effectively. Below is an overview of the MySQL error numbers and some common ones, but the full list is extensive.
+
+### Common Error Numbers in MySQL:
+
+Here are some of the most common MySQL error numbers:
+
+- **Error 1046 (3D000)**: `No database selected`
+- **Error 1049 (42000)**: `Unknown database 'database_name'`
+- **Error 1050 (42S01)**: `Table 'table_name' already exists`
+- **Error 1051 (42S02)**: `Unknown table 'table_name'`
+- **Error 1062 (23000)**: `Duplicate entry 'value' for key 'key_name'`
+- **Error 1064 (42000)**: `SQL syntax error`
+- **Error 1146 (42S02)**: `Table 'database_name.table_name' doesn't exist`
+- **Error 1149 (42000)**: `You are using MySQL version 5.7 or later, but the query is incompatible with this version`
+- **Error 1193 (HY000)**: `Unknown system variable 'variable_name'`
+- **Error 1205 (HY000)**: `Lock wait timeout exceeded; try restarting transaction`
+- **Error 1213 (40001)**: `Deadlock found when trying to get lock; try restarting transaction`
+- **Error 1226 (42000)**: `User 'user_name' has exceeded the 'max_connections' resource (current value: 'max_connections')`
+- **Error 1451 (23000)**: `Cannot delete or update a parent row: a foreign key constraint fails`
+- **Error 2002 (HY000)**: `Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)`
+- **Error 2003 (HY000)**: `Can't connect to MySQL server on 'hostname' (111)`
+- **Error 2013 (HY000)**: `Lost connection to MySQL server during query`
+- **Error 2014 (HY000)**: `Commands out of sync; you can't run this command now`
+- **Error 2006 (HY000)**: `MySQL server has gone away`
+- **Error 1140 (42000)**: `The user specified as a definer ('user'@'host') does not exist`
+- **Error 1216 (23000)**: `Cannot add or update a child row: a foreign key constraint fails`
+
+### Error Numbers for SQLSTATE and General Errors:
+
+In MySQL, errors are grouped into different categories. They include:
+
+- **MySQL Error Codes (numeric)**: Each error has a unique number.
+- **SQLSTATE Values (string)**: SQLSTATE values are 5-character codes that represent a group of errors. For example, `42000` represents SQL syntax errors.
+
+Some general categories:
+
+- **Error Codes related to SQL syntax** (e.g., 1064)
+- **Error Codes related to foreign key constraints** (e.g., 1451, 1452)
+- **Error Codes related to connections** (e.g., 2002, 2003, 2006)
+- **Error Codes related to transactions** (e.g., 1205, 1213)
+- **Permissions and User-Related Errors** (e.g., 1226, 1140)
+- **Table and Database Errors** (e.g., 1050, 1051, 1146)
+
+### Complete List of Error Numbers:
+
+The full list of error numbers and their descriptions is vast, and you can refer to the official MySQL documentation for an exhaustive list. Some of the notable sources include:
+
+1. **MySQL 8.0 Error Codes**: Official MySQL documentation provides detailed information on error codes in each version, covering both common and rare errors.
+
+   - [MySQL 8.0 Error Codes](https://dev.mysql.com/doc/refman/8.0/en/server-error-reference.html)
+
+2. **MySQL Error Reference**: This page lists errors grouped by category, with explanations and how to resolve them.
+   - [MySQL Error Reference (Official)](https://dev.mysql.com/doc/refman/5.7/en/server-error-reference.html)
+
+To explore all possible error codes and find solutions specific to your case, reviewing the official documentation or using commands like `SHOW ERRORS;` in your MySQL client interface can help you obtain more details.

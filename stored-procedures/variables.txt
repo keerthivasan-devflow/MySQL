@@ -1,0 +1,23 @@
+A variable is a named data object whose value can change during the execution of a stored procedure.
+
+DECLARE variable_name datatype(size) [DEFAULT default_value];
+
+Naming rules for variables are like MySQL table/column naming rules.
+Variables can have any MySQL datatypes.
+Typically, you use variables to hold immediate results.
+These variables are local to the stored procedure.
+
+
+MySQL allows you to declare two or more variables that share the same data type using a single DECLARE statement.
+DECLARE totalProductCount int(10), totalOrderCount int(10) DEFAULT 0;
+
+It is not possible to declare multiple variables with different data types using a single DECLARE statement.
+So you will have to use multiple DECLARE statements.
+
+You can assign values to a variable using SET
+SET totalOrderCount = 150;
+
+You can also use SELECT INTO query to store result of a query in a variable
+SELECT COUNT(*) INTO totalProductCount FROM products;
+
+

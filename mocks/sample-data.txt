@@ -1,0 +1,32 @@
+CREATE TABLE std (
+    student_id INT AUTO_INCREMENT PRIMARY KEY,   
+    firstname VARCHAR(100) NOT NULL,             
+    lastname VARCHAR(100) NOT NULL, 
+	age int(25) NOT NULL,       
+    date_of_birth DATE,                   
+    email VARCHAR(255) UNIQUE NOT NULL,
+    contact VARCHAR(15),     
+    gender ENUM('Male', 'Female', 'Other'),
+	    major VARCHAR(100),                          
+    gpa DECIMAL(3, 2),                           
+    status ENUM('Active', 'Graduated', 'Suspended', 'Dropped') DEFAULT 'Active',
+    CONSTRAINT chk_gpa CHECK (gpa >= 0.0 AND gpa <= 4.0)
+);
+
+INSERT INTO std (firstname, lastname, age, date_of_birth, email, contact, gender, major, gpa, status) 
+VALUES
+    ('John', 'Doe', 20, '2004-05-15', 'john.doe@example.com', '1234567890', 'Male', 'CSE', 3.5, 'Active'),
+    ('Jane', 'Smith', 21, '2003-08-22', 'jane.smith@example.com', '2345678901', 'Female', 'EEE', 3.7, 'Graduated'),
+    ('Michael', 'Johnson', 20, '2004-01-30', 'michael.johnson@example.com', '3456789012', 'Male', 'CSE', 3.8, 'Active'),
+    ('Emily', 'Davis', 22, '2002-03-10', 'emily.davis@example.com', '4567890123', 'Female', 'MECH', 3.6, 'Suspended'),
+    ('David', 'Wilson', 23, '2001-11-05', 'david.wilson@example.com', '5678901234', 'Male', 'EEE', 2.9, 'Active'),
+    ('Olivia', 'Taylor', 21, '2003-07-17', 'olivia.taylor@example.com', '6789012345', 'Female', 'CSE', 3.4, 'Active'),
+    ('James', 'Brown', 22, '2002-09-09', 'james.brown@example.com', '7890123456', 'Male', 'MECH', 3.1, 'Graduated'),
+    ('Sophia', 'Miller', 20, '2004-02-18', 'sophia.miller@example.com', '8901234567', 'Female', 'EEE', 3.2, 'Active'),
+    ('Liam', 'Moore', 23, '2001-12-12', 'liam.moore@example.com', '9012345678', 'Male', 'CSE', 3.9, 'Active'),
+    ('Ava', 'Anderson', 21, '2003-06-25', 'ava.anderson@example.com', '0123456789', 'Female', 'CSE', 3.3, 'Active'),
+    ('Ethan', 'Thomas', 22, '2002-04-29', 'ethan.thomas@example.com', '1234509876', 'Male', 'MECH', 2.8, 'Suspended'),
+    ('Isabella', 'Jackson', 20, '2004-02-14', 'isabella.jackson@example.com', '2345610987', 'Female', 'EEE', 3.0, 'Active'),
+    ('Mason', 'White', 21, '2003-10-30', 'mason.white@example.com', '3456721098', 'Male', 'CSE', 3.2, 'Active'),
+    ('Charlotte', 'Harris', 23, '2001-07-03', 'charlotte.harris@example.com', '4567832109', 'Female', 'MECH', 3.5, 'Graduated'),
+    ('Benjamin', 'Clark', 20, '2004-09-12', 'benjamin.clark@example.com', '5678943210', 'Male', 'EEE', 3.4, 'Dropped');

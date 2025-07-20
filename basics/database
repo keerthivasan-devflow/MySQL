@@ -1,0 +1,28 @@
+1. CREATE DATABASE
+
+	CREATE DATABASE [IF NOT EXISTS] database_name
+	-- [CHARACTER SET charset_name]
+	-- [COLLATE collation_name]
+
+2. TO LIST OUT ALL THE AVAILABL DATABASES - show databases;
+	
+	mysql - is the system database that contains tables that store information required by the MySQL server
+	information_schema - provides access to database metadata
+	performance_schema - is a feature for monitoring MySQL Server execution at a low level
+	sys - a set of objects that helps DBAs and developers interpret data collected by the Performance Schema
+
+3. To return the database which we're currently working w/ & if you don't choose any database, 
+	it will give NULL as a result. select database();
+	
+4. To switch to particular database - use database_name;
+
+5. To drop database: - This will delete the currently chosen database with all of its tables permanently.
+	Syntax: drop database database_name;
+	Example: drop database student; [OR] drop database if exists student;
+	
+Note: In MySQL, schema is  a synonym for database. so wherever we have the word database or databases, 
+we can use schema or schemas.
+
+6. Rename a database
+
+GRANT ALL PRIVILEGES ON new_database.* TO 'username'@'localhost';

@@ -1,0 +1,43 @@
+By definition, a stored procedure is a set of declarative SQL statements stored within the MySQL Server.
+The initial invocation of a stored procedure involves the following actions by MySQL:
+1. Find the stored procedure by its name in the database catalog.
+2. Compile the code of the stored procedure.
+3. Store the compiled stored procedure in a cache memory area.
+4. Finally, execute the stored procedure.
+
+If you invoke the same stored procedure again within the same session, MySQL will execute it from the cache 
+without the need for recompilation. A stored procedure can have parameters also, allowing you to pass values to 
+it and retrieve results.
+
+1. To check already created stored procedures list
+SHOW PROCEDURE STATUS;
+SOW PROCEDURE STATUS LIKE "student%";
+SHOW PROCEDURE STATUS WHERE Db = 'your_database_name';
+
+2. To see a specific definition of created procedure
+SHOW CREATE PROCEDURE your_procedure_name;
+
+3. Syntax to create stored procedure
+
+DELIMITER $$
+CREATE PROCEDURE your_procedure_name()
+BEGIN
+-- Your MySQL Query
+END $$
+DELIMITER ;
+
+CALL procedure_name(); // You can call this procedure instead of select query to list all the records of a relation
+
+
+DELIMITER $$
+CREATE PROCEDURE your_procedure_name(IN username varchar(100))
+BEGIN
+select concat("Hello ", username, "!");
+END $$
+DELIMITER ;
+
+CALL procedure_name("Keerthivasan"); 
+// You can call this procedure instead of select query to list all the records of a relation
+
+4. To delete procedures
+DROP PROCEDURE procedure_name;
