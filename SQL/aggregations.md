@@ -34,7 +34,9 @@ This will return the unique values of account_type like
 Note: Even though NULL is generally considered "unknown", in GROUP BY, all NULLs are grouped together.
 
 # HAVING CLAUSE
-The HAVING clause is used specifically with aggregated columns, while the WHERE clause cannot be used with them because it filters rows based on raw (non-aggregated) column values before aggregation occurs.
+- The HAVING clause is used specifically with aggregated columns, while the WHERE clause cannot be used with them because it filters rows based on raw (non-aggregated) column values before aggregation occurs.
+
+- WHERE clause can be used with SELECT, UPDATE and DELETE whereas HAVING clause can be used with GROUP BY.
 
 # LIMIT
 Use the LIMIT clause to optimize performance and reduce costs. Since every SELECT query can incur charges—especially when all records are retrieved and stored in the cloud—it's best to use LIMIT when you only need to view a sample of the data.

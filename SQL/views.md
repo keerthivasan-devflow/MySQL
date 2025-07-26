@@ -1,4 +1,8 @@
+# Introduction
 
+- VIEW is a database object which will be created over by SQL Query.
+- VIEW is like a virtual-table
+- VIEW does not store any data, but whenever you call a VIEW it executes the SQL Query underlying.
 
 ## TO CREATE A VIEW - This is also refered as a named query.
 

@@ -1,3 +1,17 @@
+# Resources
+### 1. YouTube channel
+- techFTQ
+- Riti Kumari
+- Jenny's Lecture
+- Data with baraa
+
+### 2. Sources
+- https://learnsql.com/
+
+
+
+
+
 
 UPDATE customers 
 SET 

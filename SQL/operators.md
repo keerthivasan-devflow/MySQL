@@ -1,4 +1,7 @@
-# 1. Comparison | Relational operators - <, >, ==, !=, <>, <=, >=
+# 1. Arithmetic Operators
+- Addition, subtraction, multiplication, division, modulo
+
+# 2. Comparison | Relational operators - <, >, ==, !=, <>, <=, >=
 
 - Column1 = Column2
 - Column = Value
@@ -6,14 +9,14 @@
 - Expression = value
 - Subquery = value
 
-# 2. Logical operators - AND | OR | NOT
+# 3. Logical operators - AND | OR | NOT
 
-# 3. Range operator - BETWEEN (both lower and upper boundaries are inclusive)
+# 4. Range operator - BETWEEN (both lower and upper boundaries are inclusive)
 
-# 4. Membership operators - IN | NOT IN 
+# 5. Membership operators - IN | NOT IN 
 	- Always use the IN operator when checking for multiple values in the same column, rather than using multiple OR conditions.
 
-# 5. Search operator - LIKE
+# 6. Search operator - LIKE
 **% - 0 | 1 | any number of subsequence characters - represents zero or more characters**
    Example: "a%" - First character must start with letter 'a'
 	Apple - true
