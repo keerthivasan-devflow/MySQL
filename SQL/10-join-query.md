@@ -1,22 +1,26 @@
-# LEFT JOIN | RIGHT JOIN
+## INNER JOIN - Retrieves only the matching records from both tables based on a common condition.
+## OUTER JOIN - Returns all records from one or both tables, including unmatched ones with nulls.
 
-- LEFT JOIN = INNER JOIN + any additional records in the left table(primary table)
-- If the `SELECT` clause includes columns from the right table that do not meet the join condition, those columns will return `NULL`.
-- Example - Fetch all the employees with their department name, manager name and project they're working on!
+# INNER JOIN | JOIN
+
+INNER JOIN returns only matching records from both tables based on at least one common column.
+
+- You can use a WHERE clause to achieve similar results, but be cautious—missing conditions can cause a cartesian product.
+- INNER JOIN is preferred/best practice for clarity and safety.
+- For LEFT/RIGHT JOIN, subqueries may be preferable
+
+# LEFT JOIN | RIGHT JOIN
+Fetch all the employees with their department name, manager name and project they're working on!
 
 # FULL OUTER JOIN
 
 - FULL OUTER JOIN = INNER JOIN + [any additional records in the right table] + [any additional records in the left table]
 - Example - Fetch all the employees with their dept name, manager name and project they're working on!
 
-SELECT e.emp_name, d.dept_name
-from employee e FULL OUTER JOIN department d
-ON e.emp_id = d.dept_id;
-
 # CROSS JOIN
 
 - No join condition is required.
-- No of records returned by cross join = No of records in the left table * No of records in the right table
+- No of records returned by cross join = No of records in the left table \* No of records in the right table
 
 SELECT e.emp_name, d.dept_name
 from employee e CROSS JOIN department d;
