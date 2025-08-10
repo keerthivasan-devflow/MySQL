@@ -42,7 +42,7 @@
 4.  Membership - IN | NOT IN
 5.  Range - BETWEEN
 6.  Null Handling - IS NULL | IS NOT NULL
-7.  LIKE - percentage(%) | underscore(\_)
+7.  LIKE - percentage(%) | underscore(_)
 
 # 8. Basic clauses
 
@@ -87,10 +87,14 @@
 
     1. Scalar Subquery
     2. Multiple Row Subquery
-        1. Multiple column and Multiple Row
-        2. Single column and Multiple Row
     3. Correlated subquery
+    4. Operators used w/ subquery - ANY | ALL | EXISTS
 
+# 13. Window Functions / Analytics Functions
+
+    1. Aggregate Functions
+    2. Rank Functions
+    3. Value Functions
 
 # References
 
@@ -100,3 +104,11 @@
 
 - Data with baraa
 - techTFQ
+
+<!-- ## Delete it in future if not used anywhere
+| product_id | product_name | category  | price |
+| ---------- | ------------ | --------- | ----- |
+| 1          | Apple        | Fruit     | 100   |
+| 2          | Banana       | Fruit     | 50    |
+| 3          | Carrot       | Vegetable | 75    |
+| 4          | Broccoli     | Vegetable | 125   | -->

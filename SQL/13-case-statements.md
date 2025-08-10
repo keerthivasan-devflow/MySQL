@@ -19,7 +19,7 @@ END AS alias_name
 CASE
     WHEN amount > 500 THEN "costly"
     WHEN amount > 300 THEN "reasonable price"
-    ELSE 1 -- Rule break - Syntactically invalid code
+    ELSE 1 -- Rule break - syntactically invalid code
 END
 ```
 

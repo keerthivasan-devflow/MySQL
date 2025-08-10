@@ -20,7 +20,7 @@ Fetch all the employees with their department name, manager name and project the
 # CROSS JOIN
 
 - No join condition is required.
-- No of records returned by cross join = No of records in the left table \* No of records in the right table
+- No of records returned by cross join = No of records in the left table * No of records in the right table
 
 SELECT e.emp_name, d.dept_name
 from employee e CROSS JOIN department d;

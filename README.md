@@ -1,54 +1,30 @@
-# Resources
-### 1. YouTube channel
+## 1. YouTube channel
+
 - techFTQ
+- Data with baraa
 - Riti Kumari
 - Jenny's Lecture
-- Data with baraa
 
-### 2. Sources
+## 2. Online Materials
+
 - https://learnsql.com/
+- https://docs.snowflake.com/
+- https://www.oracletutorial.com/oracle-basics
 
+## To set up a sql-notebook using jupyter
 
+1. mkdir sql-botebook
+2. cd sql-notebook
+3. python -m venv env
+4. env\Scripts\activate
+5. pip install --upgrade pip
+6. pip install notebook
+7. pip install ipython-sql
+8. pip install prettytable==0.7.2
+9. pip install mysql-connector-python
+10. jupyter notebook
 
+- %load_ext sql
+- %sql mysql+mysqlconnector://root:root@localhost:port/database_name
 
-
-
-UPDATE customers 
-SET 
-    salesRepEmployeeNumber = (SELECT 
-            employeeNumber
-        FROM
-            employees
-        WHERE
-            jobtitle = 'Sales Rep'
-        ORDER BY RAND()
-        LIMIT 1)
-WHERE
-    salesRepEmployeeNumber IS NULL;
-
-1. How to create an empty table like already existing table? https://dev.mysql.com/doc/refman/8.0/en/create-table.html
-
-2. Difference between truncate and delete
-- https://www.simplilearn.com/tutorials/sql-tutorial/sql-truncate-vs-delete
-- https://www.tutorialspoint.com/sql/sql-truncate-table.htm
-
-
-- To learn sql - https://docs.snowflake.com/
-- To learn oracle - https://www.oracletutorial.com/oracle-basics
-
-
-mkdir sql-botebook
-cd sql-notebook
-python -m venv env
-env\Scripts\activate
-pip install --upgrade pip
-pip install notebook
-pip install ipython-sql
-pip install prettytable==0.7.2
-pip install mysql-connector-python
-jupyter notebook
-
-%load_ext sql
-%sql mysql+mysqlconnector://root:root@localhost:port/database_name
-
-!pip install ipython-sql mysql-connector-python (Run in notebook cell)
+- !pip install ipython-sql mysql-connector-python (Run in notebook cell)

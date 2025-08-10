@@ -1,0 +1,50 @@
+1. Ritikumari youtube Channel
+2. Neso academy youtube channel - Introduction to DBMS/ Database Management Systems
+3. Jenny's lecture youtube channel
+4. CSE Learner_தமிழ்
+5. Learn ToDay
+6. KnowledgebyGATE sanchir sir
+
+Introduction To Database Management System:
+1. https://aws.amazon.com/what-is/database/
+2. https://www.oracle.com/in/database/what-is-database/
+3. https://www.simplilearn.com/tutorials/dbms-tutorial/what-is-a-database
+4. https://www.scaler.com/topics/file-system-vs-dbms/
+5. https://www.quest.com/learn/what-is-a-database-management-system.aspx
+6. https://www.nutanix.com/info/database-management#why
+7. https://www.sprinkledata.com/blogs/dbms-architecture-its-5-key-components-and-types-of-database-models
+8. https://www.mongodb.com/resources/basics/databases/database-architecture
+9. https://www.bmc.com/blogs/dbms-database-management-systems/
+
+Relational Model: https://cloud.google.com/learn/what-is-a-relational-database
+Record Based Model and it types differences: https://www.drpankajdadhich.com/2021/12/the-comparison-among-record-based-data.html
+
+ER - Model: It represents the pictorial or visual representation of data which describes how the data is communicated and related to each other
+
+keys in DBMS
+1. https://herovired.com/learning-hub/blogs/keys-in-dbms/
+2. https://www.upgrad.com/blog/types-of-keys-in-dbms/
+
+Foriegn key: on delete/update cascade, SET NULL, SET DEFAULT
+1. https://www.ibm.com/docs/en/informix-servers/14.10?topic=integrity-referential
+2. https://www.geeksforgeeks.org/mysql-on-delete-cascade-constraint/
+3. https://www.youtube.com/watch?v=4jInJjEkzFw
+4. https://www.scholarhat.com/tutorial/dbms/referential-integrity-constrainsts-in-dbms
+5. https://www.geeksforgeeks.org/foreign-key-constraint-in-sql/
+
+Functional Dependency
+1.	https://monday.com/blog/project-management/functional-dependencies-2/
+2.	https://www.scaler.com/topics/dbms/functional-dependency-in-dbms/
+3.	https://www.simplilearn.com/functional-dependency-in-dbms-article
+
+Armstrong's Axioms
+1. https://www.prepbytes.com/blog/dbms/what-are-armstrongs-axioms-in-dbms/
+2. https://www.scaler.com/topics/armstrong-axioms-in-dbms/
+
+
+Datacenter: https://www.youtube.com/watch?v=Q3ERlCnhaHI
+Server: https://www.youtube.com/watch?v=dsQ36UMZr0M
+Server Vs Cloud
+Types of Servers
+Router Vs Switch: https://www.youtube.com/watch?v=aQ3nY1yvkPU
+DNS: https://www.youtube.com/watch?v=Eat_mBv7hso
