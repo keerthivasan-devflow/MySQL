@@ -13,7 +13,7 @@
 
 show tables; - it will list out all the tables which has been created and available now in particular database.
 By wrapping the table name(or any identifiers) in backticks, you tell MySQL to treat it as an identifier,
-thus avoiding any conflicts with reserved keywords
+thus avoiding any conflicts with reserved keywords.
 
 # 2. ALTER TABLE
 
@@ -51,7 +51,21 @@ thus avoiding any conflicts with reserved keywords
    TRUNCATE TABLE table_name -- deleted all the records from the table, but it just keeps table structure
 ```
 
+## Key Points (Truncate Table)
+- TRUNCATE is faster than DELETE because it doesn't log individual row deletions.
+- It resets auto-increment counters.
+- It cannot be rolled back in many databases unless inside a transaction (and even then, not always).
+- It may require higher privileges than DELETE.
+
+## Key Points About TRUNCATE in Oracle
+- Non-transactional: Once executed, it cannot be rolled back.
+- Resets storage: Frees up space and resets high water marks.
+- Resets sequences: If the table has an auto-increment-like mechanism (via triggers and sequences), the sequence itself is not reset.
+- Faster than DELETE: Because it doesn’t log individual row deletions.
+- Requires exclusive access: You can't truncate a table if it's referenced by a foreign key constraint (unless you disable or drop the constraint first)
+
 # Questions
 
 1. What is CREATE statement?
    - The CREATE statement is used to create new database objects, such as tables, views, or indexes.
+2. Does SQL support truncating multiple tables in a single statement?
