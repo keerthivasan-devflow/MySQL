@@ -42,7 +42,7 @@
 4.  Membership - IN | NOT IN
 5.  Range - BETWEEN
 6.  Null Handling - IS NULL | IS NOT NULL
-7.  LIKE - percentage(%) | underscore(_)
+7.  LIKE - percentage(%) | underscore(\_)
 
 # 8. Basic clauses
 
@@ -98,12 +98,22 @@
 
 # References
 
+## A. Reference Links
+
 - https://www.sqlservertutorial.net/
 - https://www.programiz.com/sql/
 - https://www.geeksforgeeks.org/sql/
 
-- Data with baraa
-- techTFQ
+## B. Reference YouTube Channels
+
+- SQL Bootcamp 2025 - Data with baraa
+- Sample Datasets For Practice - https://www.datawithbaraa.com/sql-introduction/sql-ultimate-course/
+- SQL basics and advanced concepts - techTFQ
+
+## Installation setup
+
+- MySQL Server Express
+- SQL Server Management Studio (SSMS)
 
 <!-- ## Delete it in future if not used anywhere
 | product_id | product_name | category  | price |
